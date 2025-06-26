@@ -20,6 +20,11 @@ Comparison with other pointing device for osu:
 
 WIP
 
+## Status and roadmap
+
+The project is still in early development phase.
+A roadmap will be available in the following month or two.
+
 ## I'd like to help
 
 Great! Head over to [`./CONTRIBUTING.md`](./CONTRIBUTING.md) and consider
