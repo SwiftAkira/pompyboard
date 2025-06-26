@@ -1,0 +1,7 @@
+{
+  "folders": [
+    { "path": "firmware-debug" },
+    { "path": "firmware-release" },
+    { "path": "web" },
+  ],
+}
