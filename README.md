@@ -14,7 +14,7 @@ Comparison with other pointing device for osu:
 | Mablet       | 300Hz (w/o smoothing) | Absolute        | **No**       | **High**    | High                    |
 | Touch screen | 240Hz                 | Absolute        | **No**       | Low         | High                    |
 
-\*: Grip in case of mouse and tablet variants and whatever touch screen's thing is called
+\*Grip in case of mouse and tablet variants and whatever touch screen's thing is called
 
 ## Okay, I'm hooked
 
