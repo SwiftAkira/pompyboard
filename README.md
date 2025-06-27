@@ -2,7 +2,7 @@
 
 ## About
 
-Pompyboard 8000Hz polling rate with absolute positioning.
+Pompyboard is an absolute positioning pointing device with 8000Hz polling rate.
 
 Comparison with other pointing device for osu:
 
