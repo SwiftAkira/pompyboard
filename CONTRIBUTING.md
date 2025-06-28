@@ -20,7 +20,7 @@ The pompyboard project can be roughly broken down into 5 parts:
 
 1. Clone this git repository
 2. [Setup devenv](https://devenv.sh/getting-started)
-3. Optionally install vscode (check [`.code-workspace`](.code-workspace))
+3. Optionally install vscode
 4. Ready, set, code!
 
 ## Contribution standards
