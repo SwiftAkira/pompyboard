@@ -8,13 +8,13 @@
 
 The pompyboard project can be roughly broken down into 5 parts:
 
-| Part     | Location                                                                               | Technologies & Resources             |
-| -------- | -------------------------------------------------------------------------------------- | ------------------------------------ |
-| Firmware | [`./firmware-debug/`](./firmware-debug/) & [`./firmware-release`](./firmware-release/) | Rust, [The Embedded Rust Book][terb] |
-| Driver   | [pompyboard/OpenTabletDriver](https://github.com/pompyboard/OpenTabletDriver) (fork)   | C#, [OpenTabletDriver][otd]          |
-| PCB      | [`./pcb/`](./pcb/)                                                                     | [KiCad][kicad]                       |
-| 3D model | [`./3d/`](./3d/)                                                                       | [FreeCAD][freecad]                   |
-| Website  | [`./web/`](./web/)                                                                     | [NextJS][nextjs]                     |
+| Part     | Location                                       | Technologies & Resources             |
+| -------- | ---------------------------------------------- | ------------------------------------ |
+| Firmware | [`./firmware/`](./firmware/)                   | Rust, [The Embedded Rust Book][terb] |
+| Driver   | [pompyboard/OpenTabletDriver][otd-fork] (fork) | C#, [OpenTabletDriver][otd]          |
+| PCB      | [`./pcb/`](./pcb/)                             | [KiCad][kicad]                       |
+| 3D model | [`./3d/`](./3d/)                               | [FreeCAD][freecad]                   |
+| Website  | [`./web/`](./web/)                             | [NextJS][nextjs]                     |
 
 ## Setting up development environment
 
@@ -57,12 +57,13 @@ Be specific and concise. Prepend scope if necessary.
 Examples:
 
 - `remove unused files`
-- `firmware-debug: add more test cases for functionName`
+- `firmware: add more test cases for functionName`
 - `web: bump packageName version from v6 to v9`
 
 <!-- Links -->
 
 [otd]: https://github.com/OpenTabletDriver/OpenTabletDriver
+[otd-fork]: https://github.com/pompyboard/OpenTabletDriver
 [freecad]: https://www.freecad.org/
 [kicad]: https://www.kicad.org/
 [terb]: https://docs.rust-embedded.org/book/
