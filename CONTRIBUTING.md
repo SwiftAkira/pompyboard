@@ -8,20 +8,21 @@
 
 The pompyboard project can be roughly broken down into 5 parts:
 
-| Part     | Location                                       | Technologies & Resources             |
-| -------- | ---------------------------------------------- | ------------------------------------ |
-| Firmware | [`./firmware/`](./firmware/)                   | Rust, [The Embedded Rust Book][terb] |
-| Driver   | [pompyboard/OpenTabletDriver][otd-fork] (fork) | C#, [OpenTabletDriver][otd]          |
-| PCB      | [`./pcb/`](./pcb/)                             | [KiCad][kicad]                       |
-| 3D model | [`./3d/`](./3d/)                               | [FreeCAD][freecad]                   |
-| Website  | [`./web/`](./web/)                             | [NextJS][nextjs]                     |
+| Part     | Location                                       |
+| -------- | ---------------------------------------------- |
+| Firmware | [`./firmware/`](./firmware/)                   |
+| Driver   | [pompyboard/OpenTabletDriver][otd-fork] (fork) |
+| PCB      | [`./pcb/`](./pcb/)                             |
+| 3D model | [`./3d/`](./3d/)                               |
+| Website  | [`./web/`](./web/)                             |
 
 ## Setting up development environment
 
 1. Clone this git repository
 2. [Setup devenv](https://devenv.sh/getting-started)
 3. Optionally install vscode
-4. Ready, set, code!
+4. Open `README.md` file of the sub-project you want to work on
+   (e.g. [`./firmware/README.md`](./firmware/README.md)) and go from there.
 
 ## Contribution standards
 
@@ -62,9 +63,4 @@ Examples:
 
 <!-- Links -->
 
-[otd]: https://github.com/OpenTabletDriver/OpenTabletDriver
 [otd-fork]: https://github.com/pompyboard/OpenTabletDriver
-[freecad]: https://www.freecad.org/
-[kicad]: https://www.kicad.org/
-[terb]: https://docs.rust-embedded.org/book/
-[nextjs]: https://nextjs.org/
