@@ -49,7 +49,8 @@ See [`./.vscode/settings.json`](./.vscode/settings.json) for more info.
 
 ### 80 character rule
 
-Keep your text under 80 character width per line unless absolutely necessary.
+Keep your text under 80 characters and rust code under 100 characters per line
+unless absolutely necessary.
 
 ### Commit
 
