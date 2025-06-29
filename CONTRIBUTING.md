@@ -23,6 +23,7 @@ The pompyboard project can be roughly broken down into 5 parts:
 3. Optionally install vscode
 4. Open `README.md` file of the sub-project you want to work on
    (e.g. [`./firmware/README.md`](./firmware/README.md)) and go from there.
+   We **HIGHLY** recommend reading the "Resources" in `README.md`.
 
 ## Contribution standards
 
