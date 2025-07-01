@@ -1,8 +1,12 @@
 # PompyBoard Firmware
 
-## Resources
+## Must read
 
+- https://probe.rs
 - https://github.com/stm32-rs/stm32f4xx-hal
+- https://github.com/rust-embedded/cortex-m
+- https://defmt.ferrous-systems.com
+- https://docs.rust-embedded.org/book
 
 ## Setting up
 
