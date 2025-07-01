@@ -6,15 +6,13 @@ Pompyboard is an absolute positioning pointing device with 8000Hz polling rate.
 
 Comparison with other pointing device for osu:
 
-| Device       | Max polling rate      | Cursor position | Cursor drift | Stability\* | Price for best hardware |
-| ------------ | --------------------- | --------------- | ------------ | ----------- | ----------------------- |
-| Pompyboard   | **8000Hz**            | Absolute        | **No**       | Low         | **Mid**                 |
-| Mouse        | **8000Hz**            | Relative        | Yes          | **High**    | **Mid**                 |
-| Tablet       | 300Hz (w/o smoothing) | Absolute        | **No**       | Low         | High                    |
-| Mablet       | 300Hz (w/o smoothing) | Absolute        | **No**       | **High**    | High                    |
-| Touch screen | 240Hz                 | Absolute        | **No**       | Low         | High                    |
-
-\*Grip in case of mouse and tablet variants and whatever touch screen's thing is called
+| Device       | Max polling rate      | Cursor position | Cursor drift | Price for best hardware |
+| ------------ | --------------------- | --------------- | ------------ | ----------------------- |
+| Pompyboard   | **8000Hz**            | Absolute        | **No**       | **Mid**                 |
+| Mouse        | **8000Hz**            | Relative        | Yes          | **Mid**                 |
+| Tablet       | 300Hz (w/o smoothing) | Absolute        | **No**       | High                    |
+| Mablet       | 300Hz (w/o smoothing) | Absolute        | **No**       | High                    |
+| Touch screen | 240Hz                 | Absolute        | **No**       | High                    |
 
 ## Okay, I'm hooked
 
