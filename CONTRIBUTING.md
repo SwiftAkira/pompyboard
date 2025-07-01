@@ -19,11 +19,8 @@ The pompyboard project can be roughly broken down into 5 parts:
 ## Setting up development environment
 
 1. Clone this git repository
-2. [Setup devenv](https://devenv.sh/getting-started)
-3. Optionally install vscode
-4. Open `README.md` file of the sub-project you want to work on
+2. Open `README.md` file of the sub-project you want to work on
    (e.g. [`./firmware/README.md`](./firmware/README.md)) and go from there.
-   We **HIGHLY** recommend reading the "Resources" in `README.md`.
 
 ## Contribution standards
 
