@@ -19,22 +19,18 @@
 
 See https://probe.rs/docs/tools/probe-rs/ for more information.
 
-```console
+```bash
 cargo run --release
 ```
 
-### Flash only
+### List USB devices
 
-See https://probe.rs/docs/tools/cargo-flash/ for more information.
-
-```console
-cargo flash --release
+```bash
+lsusb
 ```
 
-### Debug
+### Dump USB device HID report descriptor
 
-See https://probe.rs/docs/tools/cargo-embed/ for more information.
-
-```console
-cargo embed --release
+```bash
+usbhid-dump -m 1209:02d7 # (vid:pid)
 ```
