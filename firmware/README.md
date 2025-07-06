@@ -7,6 +7,10 @@
 - https://github.com/rust-embedded/cortex-m
 - https://defmt.ferrous-systems.com
 - https://docs.rust-embedded.org/book
+- (optional) also check
+  - https://github.com/rust-lang/rustlings
+  - https://www.youtube.com/@therustybits/videos
+  - https://doc.rust-lang.org/stable/book
 
 ## Setting up
 
