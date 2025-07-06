@@ -33,7 +33,15 @@ cargo run --release
 lsusb
 ```
 
-### Dump USB device HID report descriptor
+### Show device descriptor
+
+```bash
+lsusb -v -d 1209:02d7 # (vid:pid)
+```
+
+### Show HID descriptor
+
+You can use https://eleccelerator.com/usbdescreqparser/ to parse the output.
 
 ```bash
 usbhid-dump -m 1209:02d7 # (vid:pid)
