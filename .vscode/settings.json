@@ -12,6 +12,8 @@
   },
 
   // Rust
+  "rust-analyzer.check.allTargets": false,
+  "rust-analyzer.check.targets": "thumbv7em-none-eabihf",
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
     "editor.rulers": [100]
@@ -32,6 +34,10 @@
   },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+
+  "files.associations": {
+    "*.svd": "xml"
   },
 
   // Spelling
