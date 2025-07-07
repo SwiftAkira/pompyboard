@@ -28,8 +28,9 @@ jobs:
       - run: cd firmware && cargo fmt --all -- --check
         shell: devenv shell bash -- -e {0}
 
-      - run: cd firmware && cargo test
-        shell: devenv shell bash -- -e {0}
+      # todo: re-enable when there are stuff to test
+      # - run: cd firmware && cargo test
+      #   shell: devenv shell bash -- -e {0}
 
       - run: cd firmware && cargo build --release
         shell: devenv shell bash -- -e {0}
