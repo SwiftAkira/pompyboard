@@ -15,6 +15,7 @@
 
     // rust & embedded
     "probe-rs.probe-rs-debugger",
-    "rust-lang.rust-analyzer"
+    "rust-lang.rust-analyzer",
+    "zixuanwang.linkerscript" // for memory.x
   ]
 }
