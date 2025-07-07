@@ -15,6 +15,10 @@ use hal::{
     prelude::*,
 };
 
+const SENSOR_THRESHOLD: u16 = 2000;
+const SENSOR_ROWS: usize = 4;
+const SENSOR_COLUMNS: usize = 4;
+
 #[cortex_m_rt::entry]
 fn main() -> ! {
     let dp = hal::pac::Peripherals::take().unwrap(); // device peripheral
@@ -33,7 +37,7 @@ fn main() -> ! {
     let mut adc = hal::adc::Adc::adc1(dp.ADC1, true, AdcConfig::default());
     let gpioa = dp.GPIOA.split();
     let pa0 = gpioa.pa0.into_analog();
-    adc.configure_channel(&pa0, Sequence::One, SampleTime::Cycles_480);
+    adc.configure_channel(&pa0, Sequence::One, SampleTime::Cycles_28);
 
     usb::setup(hal::otg_fs::USB {
         usb_global: dp.OTG_FS_GLOBAL,
@@ -46,19 +50,67 @@ fn main() -> ! {
 
     let mut report = tablet::Report::default();
 
-    loop {
-        // for i in 0..16 {
-        //     mux.select(i);
-        //     let sample = adc.convert(&pa0, SampleTime::Cycles_480);
-        //     let _mv = adc.sample_to_millivolts(sample);
-        // }
+    let mut sensor_data = [[0; SENSOR_COLUMNS]; SENSOR_ROWS];
+    let mut mv;
 
-        mux.select(0);
-        let sample = adc.convert(&pa0, SampleTime::Cycles_480);
-        let mv = adc.sample_to_millivolts(sample);
-        report.x = mv;
-        report.y = 69;
+    loop {
+        // simulate larger array
+        for _ in 0..8 {
+            for i in 0..SENSOR_ROWS {
+                for j in 0..SENSOR_COLUMNS {
+                    mux.select(4 * i + j);
+                    let sample = adc.convert(&pa0, SampleTime::Cycles_28);
+                    mv = adc.sample_to_millivolts(sample);
+                    sensor_data[i][j] = if mv > SENSOR_THRESHOLD {
+                        mv - SENSOR_THRESHOLD
+                    } else {
+                        0
+                    };
+                }
+            }
+
+            (report.x, report.y) = find_center(sensor_data);
+        }
+
+        defmt::info!(
+            "\n{:?}\n{:?}\n{:?}\n{:?}\n{} {}",
+            sensor_data[0],
+            sensor_data[1],
+            sensor_data[2],
+            sensor_data[3],
+            report.x as u16,
+            report.y as u16
+        );
+
         usb::poll();
         usb::push(report).ok().unwrap_or(0);
     }
+}
+
+fn find_center(data: [[u16; SENSOR_COLUMNS]; SENSOR_ROWS]) -> (u16, u16) {
+    let mut total = 0;
+    for row in data {
+        for point in row {
+            total += point as u32;
+        }
+    }
+
+    if total == 0 {
+        return (0, 0);
+    }
+
+    let mut sum_x = 0;
+    let mut sum_y = 0;
+
+    for (i, row) in data.iter().enumerate() {
+        for (j, &val) in row.iter().enumerate() {
+            sum_x += val as u32 * j as u32;
+            sum_y += val as u32 * i as u32;
+        }
+    }
+
+    (
+        (10000 / 4 * sum_x / total) as u16,
+        (10000 / 4 * sum_y / total) as u16,
+    )
 }
