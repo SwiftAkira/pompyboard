@@ -19,22 +19,17 @@ jobs:
       - name: Install devenv.sh
         run: nix profile install nixpkgs#devenv
 
-      - run: cargo check
+      - run: cd firmware && cargo check
         shell: devenv shell bash -- -e {0}
-        working-directory: ./firmware
 
-      - run: cargo clippy -- -W clippy::pedantic
+      - run: cd firmware && cargo clippy -- -W clippy::pedantic
         shell: devenv shell bash -- -e {0}
-        working-directory: ./firmware
 
-      - run: cargo fmt --all -- --check
+      - run: cd firmware && cargo fmt --all -- --check
         shell: devenv shell bash -- -e {0}
-        working-directory: ./firmware
 
-      - run: cargo test
+      - run: cd firmware && cargo test
         shell: devenv shell bash -- -e {0}
-        working-directory: ./firmware
 
-      - run: cargo build --release
+      - run: cd firmware && cargo build --release
         shell: devenv shell bash -- -e {0}
-        working-directory: ./firmware
