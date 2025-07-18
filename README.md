@@ -1,10 +1,27 @@
-# Pompy Board
+# PompyBoard
 
-## About
+<img
+  align="right"
+  width="128"
+  height="128"
+  alt="WBP logo"
+  src="https://avatars.githubusercontent.com/u/217714136"
+/>
 
-Pompyboard is an absolute positioning pointing device with 8000Hz polling rate.
+[![Discord invite](https://dcbadge.limes.pink/api/server/h27rwcBn73)][discord]
+[![OpenCollective](https://img.shields.io/badge/_-opencollective-gray?style=for-the-badge&logo=opencollective)][opencollective]
 
-Comparison with other pointing device for osu:
+Pompyboard is an absolute position pointing device with 8000Hz polling rate.
+
+Pompyboard is made in the open under the [MIT software license](./LICENSE).\
+Everyone is welcomed to contribute and join us in our quest to make the best
+pointing device for our fellow osu! players.\
+If you'd also like to financially contribute to the project, you may do so in
+our [OpenCollective page][opencollective].
+
+## Comparison
+
+pompyboard vs other pointing device for osu:
 
 | Device       | Max polling rate      | Cursor position | Cursor drift | Price for best hardware |
 | ------------ | --------------------- | --------------- | ------------ | ----------------------- |
@@ -26,4 +43,7 @@ A roadmap will be available in the following month or two.
 ## I'd like to help
 
 Great! Head over to [`./CONTRIBUTING.md`](./CONTRIBUTING.md) and consider
-joining our [Discord Server](https://discord.gg/h27rwcBn73).
+joining our [Discord Server][discord].
+
+[discord]: https://discord.gg/h27rwcBn73
+[opencollective]: https://opencollective.com/pompyboard
