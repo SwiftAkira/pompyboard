@@ -13,7 +13,7 @@
 
 Pompyboard is an absolute position pointing device with 8000Hz polling rate.
 
-Pompyboard is made in the open under the [MIT software license](./LICENSE).\
+Pompyboard is made in the open under the [MIT software license][license].\
 Everyone is welcomed to contribute and join us in our quest to make the best
 pointing device for our fellow osu! players.\
 If you'd also like to financially contribute to the project, you may do so in
@@ -42,8 +42,10 @@ A roadmap will be available in the following month or two.
 
 ## I'd like to help
 
-Great! Head over to [`./CONTRIBUTING.md`](./CONTRIBUTING.md) and consider
+Great! Head over to [`./CONTRIBUTING.md`][contributing] and consider
 joining our [Discord Server][discord].
 
 [discord]: https://discord.gg/h27rwcBn73
 [opencollective]: https://opencollective.com/pompyboard
+[license]: https://github.com/pompyboard/pompyboard/blob/master/LICENSE
+[contributing]: https://github.com/pompyboard/pompyboard/blob/master/CONTRIBUTING.md
