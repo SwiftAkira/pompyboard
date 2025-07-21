@@ -14057,7 +14057,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "STM32F429IGTx"
+		(property "Value" "STM32F429IGT6"
 			(at 73.2633 265.43 0)
 			(effects
 				(font
