@@ -1,6 +1,7 @@
 /*-backups/
 /fp-info-cache
 /*.lck
+\#auto_saved_files#
 
 # "Fabrication Toolkit" plugin
 /production/
