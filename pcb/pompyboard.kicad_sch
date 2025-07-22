@@ -7040,12 +7040,6 @@
 		(uuid "1c6dd658-19ac-4f8e-b987-68b10fb837cf")
 	)
 	(junction
-		(at 226.06 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1f72fb7d-2bfd-410c-a248-f2d5b48e79c6")
-	)
-	(junction
 		(at 367.03 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7094,6 +7088,12 @@
 		(uuid "674b6940-e4c7-4ba9-953f-b4c9b5ee1e95")
 	)
 	(junction
+		(at 222.25 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "75dfd112-09ea-4ec7-a650-de6a0564d3f2")
+	)
+	(junction
 		(at 60.96 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7134,6 +7134,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a17d4918-2f45-43cb-9166-bf5012f91303")
+	)
+	(junction
+		(at 233.68 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "be321eac-cbcc-4c3e-9cff-a821515d42ff")
 	)
 	(junction
 		(at 63.5 34.29)
@@ -7947,16 +7953,6 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 49.53) (xy 241.3 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "832312c7-101a-420e-a95f-bdf22cbae24e")
-	)
-	(wire
-		(pts
 			(xy 69.85 34.29) (xy 71.12 34.29)
 		)
 		(stroke
@@ -8074,16 +8070,6 @@
 			(type default)
 		)
 		(uuid "a1f19b1c-9cf5-4cf2-a6d7-3d59d619336c")
-	)
-	(wire
-		(pts
-			(xy 226.06 36.83) (xy 226.06 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a321275d-d102-457d-b6b0-0de5e6fe8153")
 	)
 	(polyline
 		(pts
@@ -8207,6 +8193,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 36.83) (xy 233.68 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c75a486c-473a-4a6b-b87a-3e700a502843")
+	)
+	(wire
+		(pts
 			(xy 109.22 222.25) (xy 123.19 222.25)
 		)
 		(stroke
@@ -8247,6 +8243,16 @@
 	)
 	(wire
 		(pts
+			(xy 236.22 36.83) (xy 233.68 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d30a85c4-8474-467c-b4de-16f96db3f1c8")
+	)
+	(wire
+		(pts
 			(xy 226.06 31.75) (xy 226.06 36.83)
 		)
 		(stroke
@@ -8254,6 +8260,16 @@
 			(type default)
 		)
 		(uuid "d73c1632-173a-4dd0-862e-f859774fad58")
+	)
+	(wire
+		(pts
+			(xy 222.25 36.83) (xy 226.06 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da59ab35-a8a7-4efb-ba3c-71f1bb5b861f")
 	)
 	(wire
 		(pts
@@ -8317,13 +8333,23 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 49.53) (xy 226.06 60.96)
+			(xy 226.06 36.83) (xy 226.06 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ea081f59-d477-43f5-a877-3bcfdc03dd08")
+	)
+	(wire
+		(pts
+			(xy 236.22 49.53) (xy 236.22 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb98ea5e-6759-4ce4-b699-13d38b930f6a")
 	)
 	(wire
 		(pts
@@ -8337,6 +8363,16 @@
 	)
 	(wire
 		(pts
+			(xy 241.3 49.53) (xy 236.22 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f050bd71-97a6-46dd-9baa-6dd5533b80c0")
+	)
+	(wire
+		(pts
 			(xy 78.74 34.29) (xy 81.28 34.29)
 		)
 		(stroke
@@ -8347,7 +8383,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 36.83) (xy 226.06 36.83)
+			(xy 217.17 36.83) (xy 222.25 36.83)
 		)
 		(stroke
 			(width 0)
@@ -12567,6 +12603,138 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 233.68 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "58d7a513-92cc-4f3a-a635-e1e86553f717")
+		(property "Reference" "#PWR0494"
+			(at 233.68 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 233.68 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 233.68 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 233.68 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 233.68 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6b37ac97-3164-4050-94a2-3a92a455adc4")
+		)
+		(instances
+			(project "pompyboard"
+				(path "/e5830f2e-b6bc-440e-bdf9-7651ab21e3a0"
+					(reference "#PWR0494")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 222.25 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5fca4ce3-f740-4c74-89eb-077e81d945c2")
+		(property "Reference" "#PWR0493"
+			(at 222.25 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 222.25 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 222.25 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 222.25 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 222.25 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8e4da192-7a54-4eee-8fa8-d3d6207a7da5")
+		)
+		(instances
+			(project "pompyboard"
+				(path "/e5830f2e-b6bc-440e-bdf9-7651ab21e3a0"
+					(reference "#PWR0493")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 355.6 39.37 0)
 		(unit 1)
@@ -13568,6 +13736,144 @@
 			(project "pompyboard"
 				(path "/e5830f2e-b6bc-440e-bdf9-7651ab21e3a0"
 					(reference "C230")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 222.25 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a89e6dc3-746c-4055-9c71-113800d50da8")
+		(property "Reference" "C233"
+			(at 226.06 39.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 226.06 41.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 223.2152 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 222.25 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 222.25 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ce13fdbb-27fb-4421-a849-c3b01f9d91d5")
+		)
+		(pin "1"
+			(uuid "72570535-aabc-445a-b08a-0bbb5f91d457")
+		)
+		(instances
+			(project "pompyboard"
+				(path "/e5830f2e-b6bc-440e-bdf9-7651ab21e3a0"
+					(reference "C233")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 233.68 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a9e5ba18-df4f-44cc-9aac-e8b8a658522a")
+		(property "Reference" "C234"
+			(at 237.49 39.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1u"
+			(at 237.49 41.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 234.6452 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 233.68 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 233.68 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "91518c07-e2cf-4886-9d86-e44c21696dc4")
+		)
+		(pin "1"
+			(uuid "dd07b528-fe70-4f59-9f2e-cc1a7f5655c8")
+		)
+		(instances
+			(project "pompyboard"
+				(path "/e5830f2e-b6bc-440e-bdf9-7651ab21e3a0"
+					(reference "C234")
 					(unit 1)
 				)
 			)
