@@ -2,6 +2,7 @@
 /fp-info-cache
 /*.lck
 \#auto_saved_files#
+_autosave*
 
 # "Fabrication Toolkit" plugin
 /production/
