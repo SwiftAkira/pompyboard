@@ -2539,6 +2539,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C22775"
+			(at 104.14 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2adb7b4e-1f23-473d-bc3d-60ed786feee1")
 		)
@@ -4330,6 +4339,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 88.9 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C1591"
 			(at 88.9 54.61 0)
 			(effects
 				(font
