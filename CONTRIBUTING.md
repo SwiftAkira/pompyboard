@@ -10,11 +10,11 @@ The pompyboard project can be roughly broken down into 5 parts:
 
 | Part     | Location                                       |
 | -------- | ---------------------------------------------- |
-| Firmware | [`./firmware/`](./firmware/)                   |
-| Driver   | [pompyboard/OpenTabletDriver][otd-fork] (fork) |
 | PCB      | [`./pcb/`](./pcb/)                             |
+| Firmware | [`./firmware/`](./firmware/)                   |
 | 3D model | [`./3d/`](./3d/)                               |
 | Website  | [`./web/`](./web/)                             |
+| Driver   | [pompyboard/OpenTabletDriver][otd-fork] (fork) |
 
 ## Setting up development environment
 
