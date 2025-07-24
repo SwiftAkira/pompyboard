@@ -33,17 +33,9 @@ down. Just be clear about it.
 
 ### Formatting
 
-See [`./.vscode/settings.json`](./.vscode/settings.json) for more info.
-
-| File type  | Formatter                                                    |
-| ---------- | ------------------------------------------------------------ |
-| markdown   | [prettier](https://prettier.io/)                             |
-| yaml       | [prettier](https://prettier.io/)                             |
-| json       | [prettier](https://prettier.io/)                             |
-| javascript | [prettier](https://prettier.io/)                             |
-| toml       | [taplo](https://taplo.tamasfe.dev/cli/usage/formatting.html) |
-| rust       | [rustfmt](https://github.com/rust-lang/rustfmt)              |
-| nix        | [nixfmt-rfc-style](https://github.com/NixOS/nixfmt)          |
+It is expected that all text-based files are formatted using the correct
+formatter before getting committed. See
+[`./.vscode/settings.json`](./.vscode/settings.json) for more info.
 
 ### 80 character rule
 
