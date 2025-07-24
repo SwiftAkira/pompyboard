@@ -33,17 +33,20 @@ pompyboard vs other pointing device for osu:
 
 ## Okay, I'm hooked
 
-WIP
+### When can I buy the tablet?
+
+sometime during 2026.
+
+### I want help make the tablet
+
+Welcome! Please read [`./CONTRIBUTING.md`][contributing] and join our
+[Discord Server][discord].
 
 ## Status and roadmap
 
 The project is still in early development phase.
-A roadmap will be available in the following month or two.
-
-## I'd like to help
-
-Great! Head over to [`./CONTRIBUTING.md`][contributing] and consider
-joining our [Discord Server][discord].
+We are working hard to get the first prototype of the board so we can iterate on
+it until we have the final product.
 
 [discord]: https://discord.gg/h27rwcBn73
 [opencollective]: https://opencollective.com/pompyboard
