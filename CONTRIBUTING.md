@@ -37,10 +37,11 @@ It is expected that all text-based files are formatted using the correct
 formatter before getting committed. See
 [`./.vscode/settings.json`](./.vscode/settings.json) for more info.
 
-### 80 character rule
+### line length
 
 Keep your text under 80 characters and rust code under 100 characters per line
-unless absolutely necessary.
+unless absolutely necessary. If you are using vscode, a ruler should help you
+know when you are over that limit.
 
 ### Commit
 
