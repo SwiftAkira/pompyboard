@@ -38,7 +38,7 @@ pompyboard vs wacom tablet:
 | Tablet            | Active area  | resolution | Hover height | Report rate | Price                                                                             |
 | ----------------- | ------------ | ---------- | ------------ | ----------- | --------------------------------------------------------------------------------- |
 | Pompyboard v1     | 180 × 100 mm | 200 lpmm   | 20 mm        | 8000 Hz     | 100~200 USD                                                                       |
-| [CTH-480][cth480] | 152 × 95 mm  | 100 lpmm   | 21 mm        | 133 Hz      | -                                                                                 |
+| [CTH-480][cth480] | 152 × 95 mm  | 100 lpmm   | 21 mm        | 133 Hz      | discontinued                                                                      |
 | [CTL-472][ctl472] | 152 × 95 mm  | 100 lpmm   | 17 mm        | 133 Hz      | [$39.95](https://estore.wacom.com/en-us/one-by-wacom-small-ctl472k1a.html)        |
 | [PTK-470][ptk470] | 187 × 105 mm | 200 lpmm   | ?            | 300 Hz      | [$249.95](https://estore.wacom.com/en-us/wacom-intuos-pro-small-s-ptk470k0a.html) |
 
