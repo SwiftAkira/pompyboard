@@ -44,9 +44,9 @@ pompyboard vs wacom tablet:
 
 ## Okay, I'm hooked
 
-### When can I buy the tablet?
+### Where can I buy the tablet?
 
-sometime during 2026.
+The tablet is still under development. It will be released sometime during 2026.
 
 ### I want help make the tablet
 
