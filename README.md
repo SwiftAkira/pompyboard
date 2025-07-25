@@ -23,13 +23,15 @@ our [OpenCollective page][opencollective].
 
 pompyboard vs other pointing device for osu:
 
-| Device       | Max polling rate      | Cursor position | Cursor drift | Price for best hardware |
-| ------------ | --------------------- | --------------- | ------------ | ----------------------- |
-| Pompyboard   | **8000Hz**            | Absolute        | **No**       | **Mid**                 |
-| Mouse        | **8000Hz**            | Relative        | Yes          | **Mid**                 |
-| Tablet       | 300Hz (w/o smoothing) | Absolute        | **No**       | High                    |
-| Mablet       | 300Hz (w/o smoothing) | Absolute        | **No**       | High                    |
-| Touch screen | 240Hz                 | Absolute        | **No**       | High                    |
+| Device       | Max polling rate\* | Cursor position | Cursor drift | Price for best hardware |
+| ------------ | ------------------ | --------------- | ------------ | ----------------------- |
+| Pompyboard   | **8000Hz**         | Absolute        | **No**       | **Mid**                 |
+| Mouse        | **8000Hz**         | Relative        | Yes          | **Mid**                 |
+| Tablet       | 300Hz              | Absolute        | **No**       | High                    |
+| Mablet       | 300Hz              | Absolute        | **No**       | High                    |
+| Touch screen | 240Hz              | Absolute        | **No**       | High                    |
+
+\*w/o smoothing in case of tablet
 
 pompyboard vs wacom tablet:
 
