@@ -3,36 +3,16 @@
     "devenv": {
       "locked": {
         "dir": "src/modules",
-        "lastModified": 1750800495,
+        "lastModified": 1753476615,
         "owner": "cachix",
         "repo": "devenv",
-        "rev": "b33ab3610c084a7e3fabc5eefaeb437449f1efe7",
+        "rev": "8a92f0a645f8c6ee1653a492abc0be3556b0202d",
         "type": "github"
       },
       "original": {
         "dir": "src/modules",
         "owner": "cachix",
         "repo": "devenv",
-        "type": "github"
-      }
-    },
-    "fenix": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "rust-analyzer-src": "rust-analyzer-src"
-      },
-      "locked": {
-        "lastModified": 1750833544,
-        "owner": "nix-community",
-        "repo": "fenix",
-        "rev": "c3940d9ff4d37e965e5841149367234c2aad1ab6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "fenix",
         "type": "github"
       }
     },
@@ -94,10 +74,10 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1750811787,
+        "lastModified": 1753399495,
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "992f916556fcfaa94451ebc7fc6e396134bbf5b1",
+        "rev": "0d00f23f023b7215b3f1035adb5247c8ec180dbc",
         "type": "github"
       },
       "original": {
@@ -110,27 +90,30 @@
     "root": {
       "inputs": {
         "devenv": "devenv",
-        "fenix": "fenix",
         "git-hooks": "git-hooks",
         "nixpkgs": "nixpkgs",
         "pre-commit-hooks": [
           "git-hooks"
-        ]
+        ],
+        "rust-overlay": "rust-overlay"
       }
     },
-    "rust-analyzer-src": {
-      "flake": false,
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
       "locked": {
-        "lastModified": 1750788942,
-        "owner": "rust-lang",
-        "repo": "rust-analyzer",
-        "rev": "c68c8a81a7d2979778ae1e8ba024beacb4fff6b6",
+        "lastModified": 1753497720,
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "c8b8b812010515b7d9bd7e538f06a9f4edb373ff",
         "type": "github"
       },
       "original": {
-        "owner": "rust-lang",
-        "ref": "nightly",
-        "repo": "rust-analyzer",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
         "type": "github"
       }
     }
