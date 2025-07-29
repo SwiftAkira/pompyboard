@@ -13021,7 +13021,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 226.06 72.39 0)
 			(effects
 				(font
