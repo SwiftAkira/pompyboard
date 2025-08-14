@@ -1,13 +1,15 @@
 /*
 See https://docs.rs/cortex-m-rt/latest/cortex_m_rt/#memoryx
-See https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8576163259906785280 page 50
+See https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8586176342744576000 page 76
 */
 
 MEMORY
 {
   /* K = 1024 bytes */
-  FLASH (rx): ORIGIN = 0x08000000, LENGTH = 256K /* 0x0800_0000 ~ 0x0803_FFFF */
-  RAM  (rwx): ORIGIN = 0x20000000, LENGTH = 64K  /* 0x2000_0000 ~ 0x2000_FFFF */
+  /* M = 1024K */
+     RAM(rwx): ORIGIN = 0x20000000, LENGTH = 192K
+  CCMRAM(rwx): ORIGIN = 0x10000000, LENGTH = 64K
+   FLASH(rx ): ORIGIN = 0x08000000, LENGTH = 1M
 }
 
 _stack_start = ORIGIN(RAM) + LENGTH(RAM);
