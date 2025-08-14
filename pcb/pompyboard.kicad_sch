@@ -7368,10 +7368,6 @@
 		(uuid "6141057e-44d5-43a5-88a5-97f16eb25b8b")
 	)
 	(no_connect
-		(at 27.94 54.61)
-		(uuid "61593667-1c20-4ea9-94e4-784191f56566")
-	)
-	(no_connect
 		(at 27.94 214.63)
 		(uuid "66dffdb1-36d4-4823-8451-1104ed1f16cf")
 	)
@@ -7740,6 +7736,16 @@
 			(type default)
 		)
 		(uuid "1a52be54-6497-4fbc-a90c-012ade134984")
+	)
+	(wire
+		(pts
+			(xy 24.13 54.61) (xy 27.94 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b3dbccd-58f9-4494-9882-d73669141e20")
 	)
 	(polyline
 		(pts
@@ -13542,6 +13548,72 @@
 			(project "pompyboard"
 				(path "/e5830f2e-b6bc-440e-bdf9-7651ab21e3a0"
 					(reference "#PWR038")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 24.13 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a8a1be9-a866-4a7e-a893-585bfdf3ec64")
+		(property "Reference" "#PWR06"
+			(at 24.13 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 24.13 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 24.13 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 24.13 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 24.13 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "65c22589-eebe-470a-8bdc-d0ac176372f6")
+		)
+		(instances
+			(project "pompyboard"
+				(path "/e5830f2e-b6bc-440e-bdf9-7651ab21e3a0"
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
