@@ -6357,9 +6357,9 @@
 		)
 		(uuid "39868e02-73f4-42ec-bd12-49853d7c63c0")
 	)
-	(text "Button for mouse click"
+	(text "Button"
 		(exclude_from_sim no)
-		(at 119.126 203.454 0)
+		(at 121.92 191.77 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6703,6 +6703,12 @@
 		(uuid "54ae2b07-232e-4392-8f1a-f325210fd960")
 	)
 	(junction
+		(at 124.46 208.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "56ab1a7c-fabc-406b-94f3-48355084a391")
+	)
+	(junction
 		(at 266.7 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6751,12 +6757,6 @@
 		(uuid "9d7badb2-dd36-4cf8-8a2d-f3ae19a87a18")
 	)
 	(junction
-		(at 123.19 222.25)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a17d4918-2f45-43cb-9166-bf5012f91303")
-	)
-	(junction
 		(at 210.82 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6767,6 +6767,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b444c150-bc06-4b58-aba8-57c25f697580")
+	)
+	(junction
+		(at 124.46 228.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b94a7d6a-8fdc-402c-a725-f48eb8b2c3a6")
 	)
 	(junction
 		(at 294.64 44.45)
@@ -6837,10 +6843,6 @@
 	(no_connect
 		(at 27.94 125.73)
 		(uuid "03fc295a-1e48-45d6-9de7-6b30abe052f9")
-	)
-	(no_connect
-		(at 109.22 217.17)
-		(uuid "04c35251-832f-480a-9916-48969a4d5214")
 	)
 	(no_connect
 		(at 27.94 100.33)
@@ -6921,10 +6923,6 @@
 	(no_connect
 		(at 109.22 168.91)
 		(uuid "3bb66392-719b-42da-b640-f8249d26c1c6")
-	)
-	(no_connect
-		(at 109.22 219.71)
-		(uuid "3d8382db-d3ea-4663-9f8f-6cb97f729638")
 	)
 	(no_connect
 		(at 27.94 189.23)
@@ -7163,6 +7161,10 @@
 		(uuid "b3235345-4077-49da-a009-63e76272ef06")
 	)
 	(no_connect
+		(at 109.22 222.25)
+		(uuid "b43412cc-7461-4ea8-abb3-ba4f8d57e669")
+	)
+	(no_connect
 		(at 109.22 247.65)
 		(uuid "b7671f25-0a4f-4576-8e77-e6808d6dac97")
 	)
@@ -7312,9 +7314,19 @@
 		)
 		(uuid "02f289b9-d092-48ec-be1d-4cbce9350b16")
 	)
+	(wire
+		(pts
+			(xy 120.65 228.6) (xy 124.46 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06e220e3-cd32-4075-9f26-6e70d71b3a54")
+	)
 	(polyline
 		(pts
-			(xy 147.32 231.14) (xy 147.32 204.47)
+			(xy 146.05 234.95) (xy 146.05 193.04)
 		)
 		(stroke
 			(width 0)
@@ -7382,15 +7394,55 @@
 		)
 		(uuid "1a52be54-6497-4fbc-a90c-012ade134984")
 	)
+	(wire
+		(pts
+			(xy 120.65 219.71) (xy 120.65 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b798c42-4b67-4400-b080-d1acc1904eea")
+	)
 	(polyline
 		(pts
-			(xy 147.32 204.47) (xy 119.38 204.47)
+			(xy 146.05 193.04) (xy 121.92 193.04)
 		)
 		(stroke
 			(width 0)
 			(type dash)
 		)
 		(uuid "22190568-0507-460b-a51a-5ac290279a05")
+	)
+	(wire
+		(pts
+			(xy 120.65 208.28) (xy 124.46 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f215c01-c3f0-4ba5-b92d-263f27b72d2e")
+	)
+	(wire
+		(pts
+			(xy 120.65 217.17) (xy 120.65 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32a1c15a-4a04-44d9-8645-a14d6213b537")
+	)
+	(wire
+		(pts
+			(xy 124.46 208.28) (xy 133.35 208.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3492c97c-7b2b-4a0e-892d-ab625d37871a")
 	)
 	(wire
 		(pts
@@ -7494,6 +7546,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 217.17) (xy 120.65 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e84d75b-b594-4964-b91e-1ea2c36f05b1")
+	)
+	(wire
+		(pts
 			(xy 294.64 44.45) (xy 297.18 44.45)
 		)
 		(stroke
@@ -7571,6 +7633,16 @@
 			(type default)
 		)
 		(uuid "7b876aeb-b096-48ff-b11f-0a1b8d523f98")
+	)
+	(wire
+		(pts
+			(xy 109.22 219.71) (xy 120.65 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7bcdb701-6321-407f-b82e-018e50e64c76")
 	)
 	(polyline
 		(pts
@@ -7724,7 +7796,7 @@
 	)
 	(polyline
 		(pts
-			(xy 119.38 231.14) (xy 147.32 231.14)
+			(xy 121.92 234.95) (xy 146.05 234.95)
 		)
 		(stroke
 			(width 0)
@@ -7744,7 +7816,7 @@
 	)
 	(polyline
 		(pts
-			(xy 119.38 204.47) (xy 119.38 231.14)
+			(xy 121.92 193.04) (xy 121.92 234.95)
 		)
 		(stroke
 			(width 0)
@@ -7851,16 +7923,6 @@
 			(type default)
 		)
 		(uuid "c6cce919-9732-4822-874d-f1c35129d1f1")
-	)
-	(wire
-		(pts
-			(xy 109.22 222.25) (xy 123.19 222.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c87375b1-09db-4a30-8e87-54d9aca0a54a")
 	)
 	(wire
 		(pts
@@ -8024,7 +8086,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 222.25) (xy 132.08 222.25)
+			(xy 124.46 228.6) (xy 133.35 228.6)
 		)
 		(stroke
 			(width 0)
@@ -9254,7 +9316,7 @@
 	)
 	(global_label "3.3V"
 		(shape input)
-		(at 123.19 214.63 90)
+		(at 124.46 220.98 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9264,7 +9326,7 @@
 		)
 		(uuid "66dcf758-a905-475a-be49-b9ba436e1665")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 123.19 207.5324 90)
+			(at 124.46 213.8824 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9842,6 +9904,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "3.3V"
+		(shape input)
+		(at 124.46 200.66 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "99a6715b-f549-4d91-a78a-84662c8337fc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 124.46 193.5624 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -10947,8 +11031,74 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 143.51 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "03826ad5-465e-4576-8292-f5008787ee50")
+		(property "Reference" "#PWR056"
+			(at 143.51 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 143.51 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 143.51 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 143.51 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 143.51 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "99f8c94c-ea33-47ba-8879-66a7a70f26dc")
+		)
+		(instances
+			(project "pompyboard"
+				(path "/e5830f2e-b6bc-440e-bdf9-7651ab21e3a0"
+					(reference "#PWR056")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 137.16 222.25 0)
+		(at 138.43 228.6 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10957,7 +11107,7 @@
 		(fields_autoplaced yes)
 		(uuid "05aad280-9364-4a05-adb5-3d2044695682")
 		(property "Reference" "SW1"
-			(at 137.16 214.63 0)
+			(at 138.43 220.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10965,7 +11115,7 @@
 			)
 		)
 		(property "Value" "EVQQ2B03W"
-			(at 137.16 217.17 0)
+			(at 138.43 223.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10973,7 +11123,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_SMD:SW_SPST_EVQQ2"
-			(at 137.16 217.17 0)
+			(at 138.43 223.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10982,7 +11132,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 137.16 217.17 0)
+			(at 138.43 223.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10991,7 +11141,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 137.16 222.25 0)
+			(at 138.43 228.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11000,7 +11150,7 @@
 			)
 		)
 		(property "LCSC Part #" "C79178"
-			(at 137.16 222.25 0)
+			(at 138.43 228.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11111,7 +11261,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1133faae-c3b4-4522-9c2d-34f95704698a")
-		(property "Reference" "R22"
+		(property "Reference" "R23"
 			(at 219.71 58.4199 0)
 			(effects
 				(font
@@ -11174,7 +11324,85 @@
 		(instances
 			(project "pompyboard"
 				(path "/e5830f2e-b6bc-440e-bdf9-7651ab21e3a0"
-					(reference "R22")
+					(reference "R23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 124.46 204.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "197bfe6c-4614-4aac-8dc3-06f9902507f4")
+		(property "Reference" "R21"
+			(at 127 203.1999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 127 205.7399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 122.682 204.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 124.46 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 124.46 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C25744"
+			(at 124.46 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2878ab58-913a-48a0-a5d2-78f53b073cd1")
+		)
+		(pin "2"
+			(uuid "9dafd7c5-b077-4062-9d73-6ffbc7bb7561")
+		)
+		(instances
+			(project "pompyboard"
+				(path "/e5830f2e-b6bc-440e-bdf9-7651ab21e3a0"
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -11457,7 +11685,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 123.19 218.44 0)
+		(at 124.46 224.79 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11466,7 +11694,7 @@
 		(fields_autoplaced yes)
 		(uuid "38d2a07e-b075-4179-9b8f-5cec0b5f882f")
 		(property "Reference" "R20"
-			(at 125.73 217.1699 0)
+			(at 127 223.5199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11475,7 +11703,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 125.73 219.7099 0)
+			(at 127 226.0599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11484,7 +11712,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 121.412 218.44 90)
+			(at 122.682 224.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11493,7 +11721,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 123.19 218.44 0)
+			(at 124.46 224.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11502,7 +11730,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 123.19 218.44 0)
+			(at 124.46 224.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11511,7 +11739,7 @@
 			)
 		)
 		(property "LCSC Part #" "C25744"
-			(at 123.19 218.44 0)
+			(at 124.46 224.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11610,7 +11838,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4ebb8529-a748-4a3d-80b8-3a117dc85a29")
-		(property "Reference" "R23"
+		(property "Reference" "R25"
 			(at 321.31 46.9899 0)
 			(effects
 				(font
@@ -11673,7 +11901,7 @@
 		(instances
 			(project "pompyboard"
 				(path "/e5830f2e-b6bc-440e-bdf9-7651ab21e3a0"
-					(reference "R23")
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -12511,7 +12739,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8f32807a-2bb4-4a51-8ea9-c4a6031ba754")
-		(property "Reference" "R21"
+		(property "Reference" "R22"
 			(at 215.9 73.6599 0)
 			(effects
 				(font
@@ -12574,7 +12802,7 @@
 		(instances
 			(project ""
 				(path "/e5830f2e-b6bc-440e-bdf9-7651ab21e3a0"
-					(reference "R21")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -13205,8 +13433,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 138.43 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d9501b81-853d-4b05-a59c-411941b4349a")
+		(property "Reference" "SW2"
+			(at 138.43 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EVQQ2B03W"
+			(at 138.43 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_EVQQ2"
+			(at 138.43 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 138.43 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 138.43 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C79178"
+			(at 138.43 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2cfb7f16-7a10-4913-9622-65a28d8ba670")
+		)
+		(pin "1"
+			(uuid "9c0e997a-c42a-4927-b2d1-87054050c43e")
+		)
+		(instances
+			(project "pompyboard"
+				(path "/e5830f2e-b6bc-440e-bdf9-7651ab21e3a0"
+					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
-		(at 142.24 222.25 0)
+		(at 143.51 228.6 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13215,7 +13520,7 @@
 		(fields_autoplaced yes)
 		(uuid "e1c51803-4641-441d-b6c8-48537d08597e")
 		(property "Reference" "#PWR016"
-			(at 142.24 228.6 0)
+			(at 143.51 234.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13224,7 +13529,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 142.24 227.33 0)
+			(at 143.51 233.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13232,7 +13537,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 142.24 222.25 0)
+			(at 143.51 228.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13241,7 +13546,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 222.25 0)
+			(at 143.51 228.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13250,7 +13555,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 142.24 222.25 0)
+			(at 143.51 228.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
