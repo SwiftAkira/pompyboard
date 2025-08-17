@@ -23,6 +23,8 @@ Both prototype and production PCB is manufactured by [JLCPCB][jlcpcb].
    - PCB Assembly
      - PCBA Qty - minimum is 2
      - Confirm Parts Placement - Yes
+     - Advanced
+       - Board Cleaning - Yes
 7. Press "NEXT"
 8. Inspect PCB and press "NEXT" again
 9. Upload and process `pcb/production/bom.csv` and `pcb/production/positions.csv`
