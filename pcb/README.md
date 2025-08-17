@@ -27,7 +27,6 @@ Both prototype and production PCB is manufactured by [JLCPCB][jlcpcb].
 8. Upload `pcb/production/bom.csv` and `pcb/production/positions.csv`
 9. Fix component placement
    - J2 (1x4 pin)
-   - U231 (voltage regulator)
 
 [kicad]: https://www.kicad.org/
 [jlcpcb]: https://jlcpcb.com/
