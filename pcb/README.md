@@ -23,7 +23,7 @@ Both prototype and production PCB is manufactured by [JLCPCB][jlcpcb].
    - PCB Assembly
      - PCBA Qty - minimum is 2
      - Confirm Parts Placement - Yes
-7. Press SAVE TO CART
+7. Press NEXT
 8. Upload `pcb/production/bom.csv` and `pcb/production/positions.csv`
 9. Fix component placement
    - J2 (1x4 pin)
