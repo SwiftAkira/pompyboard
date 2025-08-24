@@ -1,10 +1,20 @@
 {
-  "$schema": "https://json.schemastore.org/prettierrc",
-  "semi": false,
+    "$schema": "https://json.schemastore.org/prettierrc",
+    "semi": false,
 
-  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+    "tabWidth": 4,
+    "overrides": [
+        {
+            "files": ["*.md", "*.yml"],
+            "options": {
+                "tabWidth": 2
+            }
+        }
+    ],
 
-  "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+    "plugins": ["@trivago/prettier-plugin-sort-imports"],
+
+    "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true
 }

@@ -7,29 +7,29 @@ import "./globals.css"
 const notoSans = Noto_Sans()
 
 export const metadata: Metadata = {
-  title: "Pompyboard",
-  description: "Pompyboard",
+    title: "Pompyboard",
+    description: "Pompyboard",
 }
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode
+    children: React.ReactNode
 }>) {
-  return (
-    <html lang="en">
-      <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      </head>
+    return (
+        <html lang="en">
+            <head>
+                <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+            </head>
 
-      <body className={`${notoSans.className} antialiased`}>
-        {children}
-        <Script
-          src="/api/script.js"
-          data-site-id="6"
-          strategy="afterInteractive"
-        />
-      </body>
-    </html>
-  )
+            <body className={`${notoSans.className} antialiased`}>
+                {children}
+                <Script
+                    src="/api/script.js"
+                    data-site-id="6"
+                    strategy="afterInteractive"
+                />
+            </body>
+        </html>
+    )
 }

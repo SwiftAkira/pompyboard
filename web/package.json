@@ -1,30 +1,30 @@
 {
-  "name": "pompyboard",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "15.5.0",
-    "react": "19.1.1",
-    "react-dom": "19.1.1"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "3.3.1",
-    "@tailwindcss/postcss": "4.1.12",
-    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
-    "@types/node": "24.3.0",
-    "@types/react": "19.1.11",
-    "@types/react-dom": "19.1.7",
-    "eslint": "9.34.0",
-    "eslint-config-next": "15.5.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "prettier": "^3.6.2",
-    "tailwindcss": "4.1.12",
-    "typescript": "5.9.2"
-  }
+    "name": "pompyboard",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build --turbopack",
+        "start": "next start",
+        "lint": "eslint"
+    },
+    "dependencies": {
+        "next": "15.5.0",
+        "react": "19.1.1",
+        "react-dom": "19.1.1"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "3.3.1",
+        "@tailwindcss/postcss": "4.1.12",
+        "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+        "@types/node": "24.3.0",
+        "@types/react": "19.1.11",
+        "@types/react-dom": "19.1.7",
+        "eslint": "9.34.0",
+        "eslint-config-next": "15.5.0",
+        "eslint-plugin-react-hooks": "^5.2.0",
+        "prettier": "^3.6.2",
+        "tailwindcss": "4.1.12",
+        "typescript": "5.9.2"
+    }
 }
