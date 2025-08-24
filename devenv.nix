@@ -26,6 +26,18 @@ in
   };
 
   languages = {
+    # https://devenv.sh/supported-languages/javascript/
+    javascript = {
+      enable = true;
+
+      directory = "./web";
+
+      pnpm = {
+        enable = true;
+        install.enable = true;
+      };
+    };
+
     # https://devenv.sh/supported-languages/rust/
     rust = {
       enable = true;

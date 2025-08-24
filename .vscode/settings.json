@@ -19,6 +19,23 @@
     "editor.rulers": [100]
   },
 
+  // web
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
   // Etc
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -88,6 +105,7 @@
     "Tdefmt",
     "thumbv",
     "Tlink",
+    "turbopack",
     "usbd"
   ]
 }
