@@ -29,6 +29,7 @@ in
     # https://devenv.sh/supported-languages/javascript/
     javascript = {
       enable = true;
+      package = pkgs.nodejs_24; # latest LTS
 
       directory = "./web";
 
