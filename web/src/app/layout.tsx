@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { Noto_Sans } from "next/font/google"
+import Script from "next/script"
+
 import "./globals.css"
 
 const notoSans = Noto_Sans()

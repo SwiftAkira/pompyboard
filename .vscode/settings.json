@@ -90,6 +90,7 @@
     "nixfmt",
     "nixos",
     "nixpkgs",
+    "oxalica",
     "pclk",
     "pkgs",
     "pompy",
@@ -106,6 +107,7 @@
     "Tdefmt",
     "thumbv",
     "Tlink",
+    "trivago",
     "turbopack",
     "usbd"
   ]
