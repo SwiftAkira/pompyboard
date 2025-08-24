@@ -99,6 +99,7 @@
     "PWRCLK",
     "rustflags",
     "rustup",
+    "rybbit",
     "serde",
     "sysclk",
     "taplo",
