@@ -34,3 +34,12 @@ jobs:
 
       - run: cd firmware && cargo build --release
         shell: devenv shell bash -- -e {0}
+
+      - run: cd web && pnpm lint
+        shell: devenv shell bash -- -e {0}
+
+      - run: cd web && pnpm build
+        shell: devenv shell bash -- -e {0}
+
+      - run: cd web && pnpm prettier -l .
+        shell: devenv shell bash -- -e {0}
