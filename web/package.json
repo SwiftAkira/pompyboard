@@ -9,10 +9,12 @@
         "lint": "eslint"
     },
     "dependencies": {
+        "@t3-oss/env-nextjs": "^0.13.8",
         "next": "15.5.0",
         "next-auth": "5.0.0-beta.29",
         "react": "19.1.1",
-        "react-dom": "19.1.1"
+        "react-dom": "19.1.1",
+        "zod": "^4.1.3"
     },
     "devDependencies": {
         "@eslint/eslintrc": "3.3.1",
