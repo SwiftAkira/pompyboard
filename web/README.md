@@ -7,7 +7,9 @@
 ## Setting up
 
 1. [Setup devenv](https://devenv.sh/getting-started).
-2. Create `.env.local`. See `.env.local.example` for more info.
+2. Create postgreSQL database
+   - if you don't know where to start, check [neon][neon] / [supabase][supabase]
+3. Create `.env`. See `.env.example`.
 
 ## Commands
 
@@ -16,3 +18,6 @@
 ```bash
 pnpm dev
 ```
+
+[neon]: https://neon.com
+[supabase]: https://supabase.com

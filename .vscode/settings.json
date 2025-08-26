@@ -102,6 +102,7 @@
     "rustup",
     "rybbit",
     "serde",
+    "supabase",
     "sysclk",
     "taplo",
     "Tdefmt",
