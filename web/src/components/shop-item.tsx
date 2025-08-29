@@ -1,5 +1,6 @@
 "use client"
 
+import { Icon } from "@iconify/react"
 import { OrbitControls } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 import Link from "next/link"
@@ -9,9 +10,17 @@ import { NearestFilter, type Texture, TextureLoader } from "three"
 export default function ShopItem({
     name,
     price,
+    pollingRate,
+    activeArea,
+    resolution,
+    hoverHeight,
 }: {
     name: string
     price: string
+    pollingRate: string
+    activeArea: string
+    resolution: string
+    hoverHeight: string
 }) {
     const [texture, setTexture] = useState<Texture | undefined>(undefined)
 
@@ -25,8 +34,8 @@ export default function ShopItem({
     }, [])
 
     return (
-        <div className="w-full border-2 border-transparent bg-zinc-50 p-2 hover:border-zinc-600">
-            <div className="h-64 bg-zinc-100">
+        <div className="flex h-52 w-full border-2 border-transparent hover:border-slate-800">
+            <div className="w-md bg-zinc-50">
                 <Canvas camera={{ position: [3, 3, 3], fov: 25 }}>
                     <ambientLight intensity={3} />
                     <OrbitControls
@@ -42,15 +51,30 @@ export default function ShopItem({
                 </Canvas>
             </div>
 
-            <div className="relative flex flex-col gap-2 pt-2">
+            <div className="relative flex w-full flex-col gap-4 bg-slate-800 pt-2 pl-4 text-zinc-100">
                 <Link
                     href="/shop/mk1pro"
-                    className="text-2xl before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 hover:underline"
+                    className="text-2xl before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0"
                 >
                     {name}
                 </Link>
-
-                <span className="text-lg font-bold">${price}</span>
+                <ul>
+                    <li>
+                        <b>{pollingRate}</b> Polling rate
+                    </li>
+                    <li>
+                        <b>{activeArea}</b> Active area
+                    </li>
+                    <li>
+                        <b>{resolution}</b> resolution
+                    </li>
+                    <li>
+                        <b>{hoverHeight}</b> Hover height
+                    </li>
+                </ul>
+                <span className="mr-2 mb-4 ml-auto flex text-xl font-bold">
+                    ${price}
+                </span>
             </div>
         </div>
     )
