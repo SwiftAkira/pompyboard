@@ -6,6 +6,7 @@
     // general
     "esbenp.prettier-vscode",
     "fill-labs.dependi",
+    "github.vscode-github-actions",
     "streetsidesoftware.code-spell-checker",
     "tamasfe.even-better-toml",
 
@@ -14,6 +15,7 @@
     "mkhl.direnv",
 
     // JS/TS
+    "bradlc.vscode-tailwindcss",
     "dbaeumer.vscode-eslint",
 
     // rust & embedded
