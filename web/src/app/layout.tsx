@@ -1,3 +1,4 @@
+import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 import type { Metadata } from "next"
 import { Noto_Sans } from "next/font/google"
@@ -18,16 +19,22 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" className="h-screen">
             <head>
                 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
             </head>
 
             <body
-                className={`${notoSans.className} antialiased bg-zinc-100 text-zinc-950`}
+                className={`${notoSans.className} h-full antialiased bg-zinc-100 text-zinc-950`}
             >
-                <Navbar />
-                <div className="mx-auto max-w-4xl">{children}</div>
+                <div className="flex flex-col h-full">
+                    <Navbar />
+                    <main className="mx-auto max-w-4xl p-4 w-full grow">
+                        {children}
+                    </main>
+                    <Footer />
+                </div>
+
                 <Script
                     src="/api/script.js"
                     data-site-id="6"
