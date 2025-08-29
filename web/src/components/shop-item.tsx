@@ -30,6 +30,7 @@ export default function ShopItem({
                 <Canvas camera={{ position: [3, 3, 3], fov: 25 }}>
                     <ambientLight intensity={3} />
                     <OrbitControls
+                        enableZoom={false}
                         rotateSpeed={0.5}
                         autoRotate
                         autoRotateSpeed={0.2}
