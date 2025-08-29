@@ -25,11 +25,11 @@ export default function RootLayout({
             </head>
 
             <body
-                className={`${notoSans.className} h-full antialiased bg-zinc-100 text-zinc-950`}
+                className={`${notoSans.className} h-full bg-zinc-100 text-zinc-950 antialiased`}
             >
-                <div className="flex flex-col h-full">
+                <div className="flex h-full flex-col">
                     <Navbar />
-                    <main className="mx-auto max-w-4xl p-4 w-full grow">
+                    <main className="mx-auto w-full max-w-4xl grow p-4">
                         {children}
                     </main>
                     <Footer />

@@ -3,8 +3,8 @@ import Link from "next/link"
 
 export default function Footer() {
     return (
-        <footer className="h-48 bg-slate-800 text-slate-300 p-4">
-            <div className="flex justify-between max-w-4xl mx-auto">
+        <footer className="h-48 bg-slate-800 p-4 text-slate-300">
+            <div className="mx-auto flex max-w-4xl justify-between">
                 <div>
                     <div className="flex gap-2">
                         <Link
@@ -35,7 +35,7 @@ export default function Footer() {
                         made by{" "}
                         <Link
                             target="_blank"
-                            className="hover:underline font-bold hover:text-slate-50"
+                            className="font-bold hover:text-slate-50 hover:underline"
                             href="https://osu.ppy.sh/users/15691003"
                         >
                             pomp

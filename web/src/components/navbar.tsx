@@ -3,11 +3,11 @@ import Link from "next/link"
 
 export default function Navbar() {
     return (
-        <nav className="bg-white border-b border-zinc-200 h-16">
-            <div className="flex items-center justify-between h-full mx-auto max-w-4xl">
-                <div className="flex px-2 relative items-center h-full">
+        <nav className="h-16 border-b border-zinc-200 bg-white">
+            <div className="mx-auto flex h-full max-w-4xl items-center justify-between">
+                <div className="relative flex h-full items-center px-2">
                     <Image
-                        className="aspect-square w-12 h-12 mr-4 select-none"
+                        className="mr-4 aspect-square h-12 w-12 select-none"
                         src="/logo.png"
                         width={48}
                         height={48}
@@ -20,13 +20,13 @@ export default function Navbar() {
                     >
                         <span
                             aria-hidden
-                            className="font-extrabold text-lg select-none"
+                            className="text-lg font-extrabold select-none"
                         >
                             Pompyboard
                         </span>
                     </Link>
                 </div>
-                <div className="flex items-center h-full"></div>
+                <div className="flex h-full items-center"></div>
             </div>
         </nav>
     )

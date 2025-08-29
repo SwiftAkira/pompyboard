@@ -25,7 +25,7 @@ export default function ShopItem({
     }, [])
 
     return (
-        <div className="hover:border-zinc-600 border-transparent border-2 w-full bg-zinc-50 p-2">
+        <div className="w-full border-2 border-transparent bg-zinc-50 p-2 hover:border-zinc-600">
             <div className="h-64 bg-zinc-100">
                 <Canvas camera={{ position: [3, 3, 3], fov: 25 }}>
                     <ambientLight intensity={3} />
@@ -42,10 +42,10 @@ export default function ShopItem({
                 </Canvas>
             </div>
 
-            <div className="flex relative flex-col gap-2 pt-2">
+            <div className="relative flex flex-col gap-2 pt-2">
                 <Link
                     href="/shop/mk1pro"
-                    className="text-2xl hover:underline before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0"
+                    className="text-2xl before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 hover:underline"
                 >
                     {name}
                 </Link>
