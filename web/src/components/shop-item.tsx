@@ -26,7 +26,7 @@ export default function ShopItem({
 
     useEffect(() => {
         const texture_ = new TextureLoader().load(
-            "/streamline-pixel:interface-essential-question-help-square.png",
+            "/streamline-pixel--interface-essential-question-help-square.png",
         )
         texture_.magFilter = NearestFilter
         texture_.minFilter = NearestFilter
