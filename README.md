@@ -54,6 +54,8 @@ The tablet is still under development. It will be released sometime during 2026.
 Welcome! Please read [`./CONTRIBUTING.md`][contributing] and join our
 [Discord Server][discord].
 
+## [Frequently Asked Questions][faq]
+
 ## Status and roadmap
 
 The project is still in early development phase.
@@ -63,6 +65,7 @@ it until we have the final product.
 [discord]: https://discord.gg/h27rwcBn73
 [opencollective]: https://opencollective.com/pompyboard
 [license]: https://github.com/pompyboard/pompyboard/blob/master/LICENSE
+[faq]: https://github.com/pompyboard/pompyboard/blob/master/FAQ.md
 [contributing]: https://github.com/pompyboard/pompyboard/blob/master/CONTRIBUTING.md
 [cth480]: https://docs.google.com/spreadsheets/d/125LNzGmidy1gagwYUt12tRhrNdrWFHhWon7kxWY7iWU/edit?gid=854129046#gid=854129046&range=B15
 [ctl472]: https://docs.google.com/spreadsheets/d/125LNzGmidy1gagwYUt12tRhrNdrWFHhWon7kxWY7iWU/edit?gid=854129046#gid=854129046&range=B18
