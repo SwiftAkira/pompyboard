@@ -29,6 +29,10 @@ TMR sensors ...
 - have narrower magnetic range
 - are harder to source components
 
+## Why not xyz capacitor?
+
+https://youtu.be/ARwBwHZESOY?t=3350
+
 ## More questions?
 
 Head over to our [Discord Server][discord] and ask your questions!
