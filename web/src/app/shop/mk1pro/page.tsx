@@ -143,7 +143,7 @@ export default async function Mk1ProPage() {
                                 were impossible.
                             </p>
                             <p className="text-sm font-semibold text-blue-700">
-                                8× faster than standard tablets
+                                0.125ms response time vs 5ms standard
                             </p>
                         </div>
 
