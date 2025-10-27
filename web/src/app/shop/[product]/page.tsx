@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react"
 import Link from "next/link"
 
 // TODO: Actually build this page instead of just showing a construction cone emoji
@@ -9,14 +10,19 @@ export default async function Page({}: {
             <div className="text-9xl">🚧</div>
             <h2 className="text-6xl font-black text-slate-900">COMING SOON</h2>
             <p className="max-w-md text-lg text-slate-600">
-                We're still building this page. In the meantime, why not join our{" "}
+                We&apos;re still building this page. In the meantime, why not
+                join our{" "}
                 <Link
-                    className="font-semibold text-blue-600 underline decoration-2 underline-offset-2 transition-colors hover:text-blue-700"
+                    className="inline-flex items-center gap-1 font-semibold text-blue-600 underline decoration-2 underline-offset-2 transition-colors hover:text-blue-700"
                     href="https://discord.gg/h27rwcBn73"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     Discord
+                    <Icon icon="mdi:open-in-new" className="h-4 w-4" />
                 </Link>{" "}
-                server? You'll get notified when we launch (and probably some memes too)
+                server? You&apos;ll get notified when we launch (and probably
+                some memes too)
             </p>
         </div>
     )

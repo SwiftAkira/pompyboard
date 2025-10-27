@@ -13,7 +13,8 @@ const notoSans = Noto_Sans({
 
 export const metadata: Metadata = {
     title: "Pompyboard - Professional osu! Tablets | Open Source",
-    description: "The world's most advanced open-source tablet designed specifically for osu! players. Experience lightning-fast 8000Hz polling, pixel-perfect precision, and total customization.",
+    description:
+        "The world's most advanced open-source tablet designed specifically for osu! players. Experience lightning-fast 8000Hz polling, pixel-perfect precision, and total customization.",
 }
 
 export default function RootLayout({
@@ -32,9 +33,7 @@ export default function RootLayout({
             >
                 <div className="flex min-h-screen flex-col">
                     <Navbar />
-                    <main className="grow">
-                        {children}
-                    </main>
+                    <main className="grow">{children}</main>
                     <Footer />
                 </div>
 

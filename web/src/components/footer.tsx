@@ -13,10 +13,14 @@ export default function Footer() {
                             <Link
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="font-semibold text-slate-900 underline decoration-slate-300 decoration-2 underline-offset-2 transition-colors hover:text-blue-600 hover:decoration-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+                                className="inline-flex items-center gap-1 font-semibold text-slate-900 underline decoration-slate-300 decoration-2 underline-offset-2 transition-colors hover:text-blue-600 hover:decoration-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
                                 href="https://osu.ppy.sh/users/15691003"
                             >
                                 pomp
+                                <Icon
+                                    icon="mdi:open-in-new"
+                                    className="h-3 w-3"
+                                />
                             </Link>
                         </p>
                         <p className="mt-1 text-xs text-slate-500">
@@ -24,10 +28,14 @@ export default function Footer() {
                             <Link
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="font-semibold text-slate-900 underline decoration-slate-300 decoration-2 underline-offset-2 transition-colors hover:text-blue-600 hover:decoration-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+                                className="inline-flex items-center gap-1 font-semibold text-slate-900 underline decoration-slate-300 decoration-2 underline-offset-2 transition-colors hover:text-blue-600 hover:decoration-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
                                 href="https://github.com/SwiftAkira"
                             >
                                 Swift
+                                <Icon
+                                    icon="mdi:open-in-new"
+                                    className="h-3 w-3"
+                                />
                             </Link>{" "}
                             • © 2025 Pompyboard
                         </p>
@@ -72,10 +80,7 @@ export default function Footer() {
                             className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-slate-900 hover:text-white hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                             aria-label="GitHub"
                         >
-                            <Icon
-                                icon="fa-brands:github"
-                                className="h-6 w-6"
-                            />
+                            <Icon icon="fa-brands:github" className="h-6 w-6" />
                         </Link>
                         <Link
                             title="Send us an email"
