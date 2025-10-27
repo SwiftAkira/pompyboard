@@ -141,7 +141,7 @@ export default async function Mk1LitePage() {
                                 confidence.
                             </p>
                             <p className="text-sm font-semibold text-blue-700">
-                                Professional polling rate
+                                1ms response time vs 5ms standard
                             </p>
                         </div>
 
