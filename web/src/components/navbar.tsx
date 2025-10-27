@@ -1,32 +1,46 @@
+import { Icon } from "@iconify/react"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function Navbar() {
     return (
-        <nav className="h-16 border-b border-zinc-200 bg-white">
-            <div className="mx-auto flex h-full max-w-4xl items-center justify-between">
-                <div className="relative flex h-full items-center px-2">
+        <nav className="sticky top-0 z-50 h-16 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl transition-all">
+            <div className="mx-auto flex h-full max-w-6xl items-center justify-between px-4">
+                <Link
+                    href="/"
+                    className="group relative flex items-center gap-3 transition-opacity hover:opacity-80"
+                    aria-label="Go to home"
+                >
                     <Image
-                        className="mr-4 aspect-square h-12 w-12 select-none"
+                        className="h-10 w-10 transition-transform select-none group-hover:scale-105"
                         src="/logo.png"
-                        width={48}
-                        height={48}
-                        alt="pompyboard logo"
+                        width={40}
+                        height={40}
+                        alt="Pompyboard logo"
+                        priority
                     />
+                    <span className="text-xl font-bold text-slate-900 select-none">
+                        Pompyboard
+                    </span>
+                </Link>
+
+                <div className="flex items-center gap-6">
                     <Link
-                        href="/"
-                        aria-label="Go to home"
-                        className="before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0"
+                        href="#products"
+                        className="text-sm font-medium text-slate-700 transition-colors hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
                     >
-                        <span
-                            aria-hidden
-                            className="text-lg font-extrabold select-none"
-                        >
-                            Pompyboard
-                        </span>
+                        Products
+                    </Link>
+                    <Link
+                        href="https://discord.gg/h27rwcBn73"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-sm font-medium text-slate-700 transition-colors hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+                    >
+                        Community
+                        <Icon icon="mdi:open-in-new" className="h-4 w-4" />
                     </Link>
                 </div>
-                <div className="flex h-full items-center"></div>
             </div>
         </nav>
     )
