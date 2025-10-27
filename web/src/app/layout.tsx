@@ -6,11 +6,14 @@ import Script from "next/script"
 
 import "./globals.css"
 
-const notoSans = Noto_Sans()
+const notoSans = Noto_Sans({
+    subsets: ["latin"],
+    display: "swap",
+})
 
 export const metadata: Metadata = {
-    title: "Pompyboard",
-    description: "Pompyboard",
+    title: "Pompyboard - Professional osu! Tablets | Open Source",
+    description: "The world's most advanced open-source tablet designed specifically for osu! players. Experience lightning-fast 8000Hz polling, pixel-perfect precision, and total customization.",
 }
 
 export default function RootLayout({
@@ -19,17 +22,17 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="en" className="h-screen">
+        <html lang="en" className="scroll-smooth">
             <head>
                 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
             </head>
 
             <body
-                className={`${notoSans.className} h-full bg-zinc-100 text-zinc-950 antialiased`}
+                className={`${notoSans.className} min-h-screen bg-white text-slate-900 antialiased`}
             >
-                <div className="flex h-full flex-col">
+                <div className="flex min-h-screen flex-col">
                     <Navbar />
-                    <main className="mx-auto w-full max-w-4xl grow p-4">
+                    <main className="grow">
                         {children}
                     </main>
                     <Footer />
