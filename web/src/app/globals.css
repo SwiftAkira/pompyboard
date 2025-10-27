@@ -32,6 +32,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Scrollbars that don't look like they're from Windows 95 */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;

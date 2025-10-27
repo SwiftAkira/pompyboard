@@ -43,7 +43,7 @@ export default function Footer() {
                             href="https://discord.gg/h27rwcBn73"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-blue-600 hover:text-white hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                            className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-[#5865F2] hover:text-white hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5865F2]"
                             aria-label="Discord"
                         >
                             <Icon
@@ -56,7 +56,7 @@ export default function Footer() {
                             href="https://opencollective.com/pompyboard"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-purple-600 hover:text-white hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
+                            className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-[#7FADF2] hover:text-white hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7FADF2]"
                             aria-label="Open Collective"
                         >
                             <Icon
@@ -80,12 +80,12 @@ export default function Footer() {
                         <Link
                             title="Send us an email"
                             href="mailto:pompydev@proton.me"
-                            className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-green-600 hover:text-white hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+                            className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-[#6D4AFF] hover:text-white hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6D4AFF]"
                             aria-label="Email"
                         >
                             <Icon
-                                icon="material-symbols:mail"
-                                className="h-7 w-7"
+                                icon="simple-icons:protonmail"
+                                className="h-6 w-6"
                             />
                         </Link>
                     </div>

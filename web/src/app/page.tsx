@@ -70,6 +70,7 @@ export default async function Home() {
                             </p>
                         </div>
 
+                        {/* Yes, we measure in lines per millimeter. Because we're cool */}
                         <div className="group rounded-2xl bg-white p-8 shadow-sm transition-all hover:shadow-xl">
                             <div className="mb-4 inline-flex rounded-xl bg-purple-100 p-3">
                                 <Icon icon="mdi:target" className="h-8 w-8 text-purple-600" />
@@ -141,7 +142,7 @@ export default async function Home() {
                         href="https://discord.gg/h27rwcBn73"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-base font-semibold text-slate-900 shadow-lg transition-all hover:bg-slate-100 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                        className="inline-flex items-center justify-center rounded-full bg-[#5865F2] px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-[#4752C4] hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5865F2]"
                     >
                         Join our Discord
                         <Icon icon="fa-brands:discord" className="ml-2 h-5 w-5" />

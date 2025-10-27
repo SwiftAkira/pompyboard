@@ -1,5 +1,6 @@
 import Link from "next/link"
 
+// TODO: Actually build this page instead of just showing a construction cone emoji
 export default async function Page({}: {
     params: Promise<{ product: string }>
 }) {

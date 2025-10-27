@@ -26,6 +26,7 @@ export default function ShopItem({
     const isPro = name.includes("Pro")
 
     useEffect(() => {
+        // Loading textures like it's 2005... it works tho lmao
         const texture_ = new TextureLoader().load(
             "/streamline-pixel--interface-essential-question-help-square.png",
         )
@@ -50,7 +51,7 @@ export default function ShopItem({
                         enableZoom={false}
                         rotateSpeed={0.5}
                         autoRotate
-                        autoRotateSpeed={1.2}
+                        autoRotateSpeed={0.2}
                     />
                     <mesh>
                         <boxGeometry />

@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -23,7 +24,6 @@ export default function Navbar() {
                     </span>
                 </Link>
                 
-                {/* Navigation links - can be expanded later */}
                 <div className="flex items-center gap-6">
                     <Link
                         href="#products"
@@ -35,9 +35,10 @@ export default function Navbar() {
                         href="https://discord.gg/h27rwcBn73"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm font-medium text-slate-700 transition-colors hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+                        className="inline-flex items-center gap-1 text-sm font-medium text-slate-700 transition-colors hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
                     >
                         Community
+                        <Icon icon="mdi:open-in-new" className="h-4 w-4" />
                     </Link>
                 </div>
             </div>
