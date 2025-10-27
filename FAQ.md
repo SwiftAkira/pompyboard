@@ -2,7 +2,11 @@
 
 [README](README.md) before reading FAQ.
 
-## Why not xyz chip?
+## What component are you using?
+
+Open the [PCB](./pcb) project in KiCad and double-click on a component.
+
+## Why not xyz microprocessor?
 
 Our requirement for microcontroller is as follows:
 
@@ -12,14 +16,9 @@ Our requirement for microcontroller is as follows:
 - high enough usable ADC channels
 - low price
 
-## What component do you use?
+## Why not xyz capacitor?
 
-Open the [PCB](./pcb) project in KiCad and double-click on a component.
-
-## Why 2 layer PCB?
-
-Because a 4-layer PCB is already 50% more expensive than 2-layer PCB and the
-price only goes up from there.
+https://youtu.be/ARwBwHZESOY?t=3350
 
 ## Why not TMR?
 
@@ -29,9 +28,15 @@ TMR sensors ...
 - have narrower magnetic range
 - are harder to source components
 
-## Why not xyz capacitor?
+## Why 2 layer PCB?
 
-https://youtu.be/ARwBwHZESOY?t=3350
+Because a 4-layer PCB is already 50% more expensive than 2-layer PCB and the
+price only goes up from there.
+
+## Wouldn't 8000Hz be too much for some computers?
+
+You're right. You should be able to adjust the tablet's polling rate in our
+web-based configuration tool just like Wooting's keyboard.
 
 ## More questions?
 
