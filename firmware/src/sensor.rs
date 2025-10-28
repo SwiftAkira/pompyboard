@@ -10,9 +10,31 @@ pub static mut DATA: [u16; ROW_LEN * COL_LEN] = [0; ROW_LEN * COL_LEN];
 
 const MAX: f32 = 10_000.;
 const SAMPLE_TIME: SampleTime = SampleTime::Cycles_3;
-const THRESHOLD: u16 = 2300;
+const THRESHOLD: u16 = 2300; // Legacy global threshold (kept for backward compatibility)
 const ROW_LEN: usize = 11;
 const COL_LEN: usize = 19;
+
+/// Calibration data for each individual sensor
+/// Stores offset (baseline) and gain (sensitivity multiplier) per sensor
+#[derive(Clone, Copy)]
+pub struct CalibrationData {
+    pub offset: u16,  // Baseline reading when no pressure applied
+    pub gain: f32,    // Sensitivity multiplier (typically 0.5 to 2.0)
+}
+
+impl Default for CalibrationData {
+    fn default() -> Self {
+        CalibrationData {
+            offset: THRESHOLD,  // Use legacy threshold as default offset
+            gain: 1.0,          // Unity gain by default
+        }
+    }
+}
+
+/// Per-sensor calibration table
+/// Each sensor in the grid has individual calibration parameters
+pub static mut CALIBRATION: [CalibrationData; ROW_LEN * COL_LEN] = 
+    [CalibrationData { offset: THRESHOLD, gain: 1.0 }; ROW_LEN * COL_LEN];
 const CHANNELS: [[bool; 4]; ROW_LEN] = [
     [false, true, false, true],   // 10
     [true, false, false, true],   // 9
@@ -158,25 +180,26 @@ impl Sensor {
         cortex_m::asm::delay(100_000); // temporary hack to reduce mux channel crosstalk
 
         unsafe {
-            DATA[i * COL_LEN + 00] = threshold(self.adc3.convert(&self.in0, SAMPLE_TIME));
-            DATA[i * COL_LEN + 01] = threshold(self.adc3.convert(&self.in1, SAMPLE_TIME));
-            DATA[i * COL_LEN + 02] = threshold(self.adc3.convert(&self.in2, SAMPLE_TIME));
-            DATA[i * COL_LEN + 03] = threshold(self.adc3.convert(&self.in3, SAMPLE_TIME));
-            DATA[i * COL_LEN + 04] = threshold(self.adc3.convert(&self.in4, SAMPLE_TIME));
-            DATA[i * COL_LEN + 05] = threshold(self.adc3.convert(&self.in5, SAMPLE_TIME));
-            DATA[i * COL_LEN + 06] = threshold(self.adc3.convert(&self.in6, SAMPLE_TIME));
-            DATA[i * COL_LEN + 07] = threshold(self.adc3.convert(&self.in7, SAMPLE_TIME));
-            DATA[i * COL_LEN + 08] = threshold(self.adc2.convert(&self.in8, SAMPLE_TIME));
-            DATA[i * COL_LEN + 09] = threshold(self.adc2.convert(&self.in9, SAMPLE_TIME));
-            DATA[i * COL_LEN + 10] = threshold(self.adc2.convert(&self.in10, SAMPLE_TIME));
-            DATA[i * COL_LEN + 11] = threshold(self.adc2.convert(&self.in11, SAMPLE_TIME));
-            DATA[i * COL_LEN + 12] = threshold(self.adc2.convert(&self.in12, SAMPLE_TIME));
-            DATA[i * COL_LEN + 13] = threshold(self.adc2.convert(&self.in13, SAMPLE_TIME));
-            DATA[i * COL_LEN + 14] = threshold(self.adc2.convert(&self.in14, SAMPLE_TIME));
-            DATA[i * COL_LEN + 15] = threshold(self.adc2.convert(&self.in15, SAMPLE_TIME));
-            DATA[i * COL_LEN + 16] = threshold(self.adc2.convert(&self.in16, SAMPLE_TIME));
-            DATA[i * COL_LEN + 17] = threshold(self.adc2.convert(&self.in17, SAMPLE_TIME));
-            DATA[i * COL_LEN + 18] = threshold(self.adc2.convert(&self.in18, SAMPLE_TIME));
+            // Read raw values and apply per-sensor calibration
+            DATA[i * COL_LEN + 00] = apply_calibration(i * COL_LEN + 00, self.adc3.convert(&self.in0, SAMPLE_TIME));
+            DATA[i * COL_LEN + 01] = apply_calibration(i * COL_LEN + 01, self.adc3.convert(&self.in1, SAMPLE_TIME));
+            DATA[i * COL_LEN + 02] = apply_calibration(i * COL_LEN + 02, self.adc3.convert(&self.in2, SAMPLE_TIME));
+            DATA[i * COL_LEN + 03] = apply_calibration(i * COL_LEN + 03, self.adc3.convert(&self.in3, SAMPLE_TIME));
+            DATA[i * COL_LEN + 04] = apply_calibration(i * COL_LEN + 04, self.adc3.convert(&self.in4, SAMPLE_TIME));
+            DATA[i * COL_LEN + 05] = apply_calibration(i * COL_LEN + 05, self.adc3.convert(&self.in5, SAMPLE_TIME));
+            DATA[i * COL_LEN + 06] = apply_calibration(i * COL_LEN + 06, self.adc3.convert(&self.in6, SAMPLE_TIME));
+            DATA[i * COL_LEN + 07] = apply_calibration(i * COL_LEN + 07, self.adc3.convert(&self.in7, SAMPLE_TIME));
+            DATA[i * COL_LEN + 08] = apply_calibration(i * COL_LEN + 08, self.adc2.convert(&self.in8, SAMPLE_TIME));
+            DATA[i * COL_LEN + 09] = apply_calibration(i * COL_LEN + 09, self.adc2.convert(&self.in9, SAMPLE_TIME));
+            DATA[i * COL_LEN + 10] = apply_calibration(i * COL_LEN + 10, self.adc2.convert(&self.in10, SAMPLE_TIME));
+            DATA[i * COL_LEN + 11] = apply_calibration(i * COL_LEN + 11, self.adc2.convert(&self.in11, SAMPLE_TIME));
+            DATA[i * COL_LEN + 12] = apply_calibration(i * COL_LEN + 12, self.adc2.convert(&self.in12, SAMPLE_TIME));
+            DATA[i * COL_LEN + 13] = apply_calibration(i * COL_LEN + 13, self.adc2.convert(&self.in13, SAMPLE_TIME));
+            DATA[i * COL_LEN + 14] = apply_calibration(i * COL_LEN + 14, self.adc2.convert(&self.in14, SAMPLE_TIME));
+            DATA[i * COL_LEN + 15] = apply_calibration(i * COL_LEN + 15, self.adc2.convert(&self.in15, SAMPLE_TIME));
+            DATA[i * COL_LEN + 16] = apply_calibration(i * COL_LEN + 16, self.adc2.convert(&self.in16, SAMPLE_TIME));
+            DATA[i * COL_LEN + 17] = apply_calibration(i * COL_LEN + 17, self.adc2.convert(&self.in17, SAMPLE_TIME));
+            DATA[i * COL_LEN + 18] = apply_calibration(i * COL_LEN + 18, self.adc2.convert(&self.in18, SAMPLE_TIME));
 
             // defmt::info!(
             //     "{:03} {:03} {:03} {:03} {:03} {:03} {:03} {:03} {:03} {:03} {:03} {:03} {:03} {:03} {:03} {:03} {:03} {:03} {:03}",
@@ -211,6 +234,153 @@ impl Sensor {
         }
 
         return find_center();
+    }
+
+    /// Perform a calibration routine to capture baseline readings for all sensors
+    /// This should be called when NO pressure is applied to any sensor
+    pub fn calibrate_offsets(&mut self) {
+        defmt::info!("Starting sensor offset calibration...");
+        
+        // Take multiple samples to average out noise
+        const CALIBRATION_SAMPLES: usize = 10;
+        let mut accumulated: [u32; ROW_LEN * COL_LEN] = [0; ROW_LEN * COL_LEN];
+        
+        for _ in 0..CALIBRATION_SAMPLES {
+            for row in 0..ROW_LEN {
+                self.select_row(row);
+                cortex_m::asm::delay(100_000);
+                
+                // Read raw values without calibration
+                unsafe {
+                    accumulated[row * COL_LEN + 00] += self.adc3.convert(&self.in0, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 01] += self.adc3.convert(&self.in1, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 02] += self.adc3.convert(&self.in2, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 03] += self.adc3.convert(&self.in3, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 04] += self.adc3.convert(&self.in4, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 05] += self.adc3.convert(&self.in5, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 06] += self.adc3.convert(&self.in6, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 07] += self.adc3.convert(&self.in7, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 08] += self.adc2.convert(&self.in8, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 09] += self.adc2.convert(&self.in9, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 10] += self.adc2.convert(&self.in10, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 11] += self.adc2.convert(&self.in11, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 12] += self.adc2.convert(&self.in12, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 13] += self.adc2.convert(&self.in13, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 14] += self.adc2.convert(&self.in14, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 15] += self.adc2.convert(&self.in15, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 16] += self.adc2.convert(&self.in16, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 17] += self.adc2.convert(&self.in17, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 18] += self.adc2.convert(&self.in18, SAMPLE_TIME) as u32;
+                }
+            }
+        }
+        
+        // Calculate averages and store as offsets
+        unsafe {
+            for i in 0..(ROW_LEN * COL_LEN) {
+                let avg = (accumulated[i] / CALIBRATION_SAMPLES as u32) as u16;
+                CALIBRATION[i].offset = avg;
+                defmt::debug!("Sensor {} offset: {}", i, avg);
+            }
+        }
+        
+        defmt::info!("Offset calibration complete!");
+    }
+
+    /// Calibrate gain for sensors by applying known uniform pressure
+    /// This should be called when a uniform known pressure is applied to all sensors
+    /// target_value: expected ADC reading after offset removal (e.g., 1000 for moderate pressure)
+    pub fn calibrate_gains(&mut self, target_value: u16) {
+        defmt::info!("Starting sensor gain calibration with target value {}...", target_value);
+        
+        const CALIBRATION_SAMPLES: usize = 10;
+        let mut accumulated: [u32; ROW_LEN * COL_LEN] = [0; ROW_LEN * COL_LEN];
+        
+        for _ in 0..CALIBRATION_SAMPLES {
+            for row in 0..ROW_LEN {
+                self.select_row(row);
+                cortex_m::asm::delay(100_000);
+                
+                unsafe {
+                    accumulated[row * COL_LEN + 00] += self.adc3.convert(&self.in0, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 01] += self.adc3.convert(&self.in1, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 02] += self.adc3.convert(&self.in2, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 03] += self.adc3.convert(&self.in3, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 04] += self.adc3.convert(&self.in4, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 05] += self.adc3.convert(&self.in5, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 06] += self.adc3.convert(&self.in6, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 07] += self.adc3.convert(&self.in7, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 08] += self.adc2.convert(&self.in8, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 09] += self.adc2.convert(&self.in9, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 10] += self.adc2.convert(&self.in10, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 11] += self.adc2.convert(&self.in11, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 12] += self.adc2.convert(&self.in12, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 13] += self.adc2.convert(&self.in13, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 14] += self.adc2.convert(&self.in14, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 15] += self.adc2.convert(&self.in15, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 16] += self.adc2.convert(&self.in16, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 17] += self.adc2.convert(&self.in17, SAMPLE_TIME) as u32;
+                    accumulated[row * COL_LEN + 18] += self.adc2.convert(&self.in18, SAMPLE_TIME) as u32;
+                }
+            }
+        }
+        
+        // Calculate gain factors
+        unsafe {
+            for i in 0..(ROW_LEN * COL_LEN) {
+                let avg = (accumulated[i] / CALIBRATION_SAMPLES as u32) as u16;
+                
+                // Calculate offset-corrected value
+                let offset_corrected = if avg > CALIBRATION[i].offset {
+                    avg - CALIBRATION[i].offset
+                } else {
+                    1 // Prevent division by zero
+                };
+                
+                // Calculate gain to normalize to target
+                if offset_corrected > 0 {
+                    CALIBRATION[i].gain = target_value as f32 / offset_corrected as f32;
+                    defmt::debug!("Sensor {} gain: {}", i, CALIBRATION[i].gain);
+                }
+            }
+        }
+        
+        defmt::info!("Gain calibration complete!");
+    }
+
+    /// Reset all calibration data to defaults
+    pub fn reset_calibration(&mut self) {
+        unsafe {
+            for i in 0..(ROW_LEN * COL_LEN) {
+                CALIBRATION[i] = CalibrationData::default();
+            }
+        }
+        defmt::info!("Calibration reset to defaults");
+    }
+}
+
+/// Apply per-sensor calibration to a raw ADC reading
+/// sensor_index: index in the sensor array (0 to ROW_LEN*COL_LEN-1)
+/// raw_value: raw ADC reading
+/// Returns: calibrated value
+pub fn apply_calibration(sensor_index: usize, raw_value: u16) -> u16 {
+    unsafe {
+        let cal = CALIBRATION[sensor_index];
+        
+        // Apply offset
+        let offset_corrected = if raw_value > cal.offset {
+            raw_value - cal.offset
+        } else {
+            0
+        };
+        
+        // Apply gain and clamp to u16 range
+        let calibrated = (offset_corrected as f32 * cal.gain) as u32;
+        if calibrated > u16::MAX as u32 {
+            u16::MAX
+        } else {
+            calibrated as u16
+        }
     }
 }
 
