@@ -1,5 +1,11 @@
 import { jsonb, pgTable, serial, timestamp, varchar } from "drizzle-orm/pg-core"
 
+/**
+ * Subscribers table schema
+ *
+ * Stores mailing list subscribers with tracking information
+ * for marketing and product launch communications.
+ */
 export const subscribers = pgTable("subscribers", {
     id: serial("id").primaryKey(),
     email: varchar("email", { length: 255 }).notNull().unique(),

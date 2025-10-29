@@ -4,6 +4,21 @@ import { checkRateLimit } from "@/lib/rate-limit"
 import { subscribeSchema } from "@/lib/validations/subscriber"
 import { type NextRequest, NextResponse } from "next/server"
 
+/**
+ * POST /api/subscribe
+ *
+ * Subscribe endpoint for the mailing list.
+ *
+ * Rate Limiting:
+ * - 3 requests per minute per IP address
+ * - Prevents spam and abuse while allowing legitimate resubmission attempts
+ * - Consider increasing limit if users report issues during legitimate use
+ *
+ * Security:
+ * - Returns success for duplicate emails to prevent email enumeration
+ * - Sanitizes email input (lowercase, trim)
+ * - Generic error messages to avoid information disclosure
+ */
 export async function POST(request: NextRequest) {
     try {
         // 1. Rate limiting - check FIRST before expensive operations
