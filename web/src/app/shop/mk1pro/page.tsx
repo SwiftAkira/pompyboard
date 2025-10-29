@@ -73,7 +73,7 @@ export default async function Mk1ProPage() {
                         <div className="flex flex-col items-center justify-center gap-3">
                             <Link
                                 href="#specs"
-                                className="text-sm font-medium text-blue-600 underline decoration-2 underline-offset-4 transition-colors hover:text-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                                className="text-sm font-medium text-blue-600 underline decoration-2 underline-offset-4 transition-colors hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                             >
                                 View full specifications ↓
                             </Link>
@@ -82,7 +82,7 @@ export default async function Mk1ProPage() {
                                     href="https://discord.gg/h27rwcBn73"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                                    className="inline-flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                                 >
                                     <Icon
                                         icon="fa-brands:discord"
@@ -97,7 +97,7 @@ export default async function Mk1ProPage() {
                                 <span className="text-slate-300">•</span>
                                 <Link
                                     href="/"
-                                    className="inline-flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                                    className="inline-flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                                 >
                                     <Icon
                                         icon="mdi:arrow-left"
@@ -333,7 +333,7 @@ export default async function Mk1ProPage() {
                     <div className="text-center">
                         <Link
                             href="/shop/mk1lite"
-                            className="inline-flex items-center gap-2 rounded-full border-2 border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition-all hover:border-slate-400 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                            className="inline-flex items-center gap-2 rounded-full border-2 border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition-all hover:border-slate-400 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                         >
                             Compare with mk.1 Lite
                             <Icon icon="mdi:arrow-right" className="h-5 w-5" />
@@ -366,7 +366,7 @@ export default async function Mk1ProPage() {
                         href="https://discord.gg/h27rwcBn73"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 rounded-full bg-[#5865F2] px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-[#4752C4] hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5865F2]"
+                        className="inline-flex items-center justify-center gap-2 rounded-full bg-[#5865F2] px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-[#4752C4] hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5865F2]"
                     >
                         <Icon icon="fa-brands:discord" className="h-5 w-5" />
                         Join Discord Community
