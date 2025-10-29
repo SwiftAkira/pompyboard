@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link"
 import { useState } from "react"
 
 export default function TechnologyPage() {
@@ -16,29 +15,6 @@ export default function TechnologyPage() {
                 ></div>
                 <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
                     <div className="mx-auto max-w-3xl text-center">
-                        <div className="mb-8">
-                            <Link
-                                href="/"
-                                className="inline-flex items-center rounded-md px-2 py-1 text-sm font-medium text-slate-600 transition-colors hover:text-indigo-600 focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 focus:outline-none"
-                                aria-label="Go back to home page"
-                            >
-                                <svg
-                                    className="mr-2 h-4 w-4"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M15 19l-7-7 7-7"
-                                    />
-                                </svg>
-                                Back to Home
-                            </Link>
-                        </div>
                         <h1 className="text-5xl font-bold tracking-tight text-slate-900 sm:text-7xl">
                             Engineering
                             <span className="block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
@@ -59,25 +35,33 @@ export default function TechnologyPage() {
                             <div className="inline-flex rounded-full border-2 border-indigo-200 bg-white p-1 shadow-sm">
                                 <button
                                     onClick={() => setIsExpertMode(false)}
-                                    className={`rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-200 focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 focus:outline-none ${
+                                    className={`relative rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-200 focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 focus:outline-none group ${
                                         !isExpertMode
                                             ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md"
                                             : "text-slate-700 hover:text-slate-900"
                                     }`}
                                     aria-pressed={!isExpertMode}
+                                    title="Simple explanations for understanding the core technology"
                                 >
                                     I&apos;m a User
+                                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block w-max max-w-xs rounded-lg bg-slate-900 px-3 py-2 text-xs text-white shadow-lg">
+                                        Simple explanations for understanding the core technology
+                                    </span>
                                 </button>
                                 <button
                                     onClick={() => setIsExpertMode(true)}
-                                    className={`rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-200 focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 focus:outline-none ${
+                                    className={`relative rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-200 focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 focus:outline-none group ${
                                         isExpertMode
                                             ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md"
                                             : "text-slate-700 hover:text-slate-900"
                                     }`}
                                     aria-pressed={isExpertMode}
+                                    title="Detailed technical analysis with research-level depth"
                                 >
                                     I&apos;m an Expert
+                                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block w-max max-w-xs rounded-lg bg-slate-900 px-3 py-2 text-xs text-white shadow-lg">
+                                        Detailed technical analysis with research-level depth
+                                    </span>
                                 </button>
                             </div>
                             <p className="mt-3 max-w-md text-center text-xs text-slate-500">
