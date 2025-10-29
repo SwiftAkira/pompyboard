@@ -1,6 +1,7 @@
 "use client"
 
 import { Icon } from "@iconify/react"
+import confetti from "canvas-confetti"
 import { useState } from "react"
 
 export default function MailingListForm({
@@ -38,6 +39,14 @@ export default function MailingListForm({
                         "Thanks! We'll keep you updated on launches and announcements.",
                 )
                 setEmail("") // Clear input
+
+                // Trigger confetti celebration! 🎉
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 },
+                    colors: ["#2563eb", "#7c3aed", "#ec4899", "#f59e0b"],
+                })
 
                 // Reset after 5 seconds
                 setTimeout(() => {
