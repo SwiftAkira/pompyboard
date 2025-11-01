@@ -13,7 +13,7 @@ export default function Footer() {
                             <Link
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 font-semibold text-slate-900 underline decoration-slate-300 decoration-2 underline-offset-2 transition-colors hover:text-blue-600 hover:decoration-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+                                className="inline-flex items-center gap-1 font-semibold text-slate-900 underline decoration-slate-300 decoration-2 underline-offset-2 transition-colors hover:text-blue-600 hover:decoration-blue-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
                                 href="https://osu.ppy.sh/users/15691003"
                             >
                                 pomp
@@ -28,7 +28,7 @@ export default function Footer() {
                             <Link
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 font-semibold text-slate-900 underline decoration-slate-300 decoration-2 underline-offset-2 transition-colors hover:text-blue-600 hover:decoration-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+                                className="inline-flex items-center gap-1 font-semibold text-slate-900 underline decoration-slate-300 decoration-2 underline-offset-2 transition-colors hover:text-blue-600 hover:decoration-blue-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
                                 href="https://github.com/SwiftAkira"
                             >
                                 Swift
@@ -51,7 +51,7 @@ export default function Footer() {
                             href="https://discord.gg/h27rwcBn73"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-[#5865F2] hover:text-white hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5865F2]"
+                            className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-[#5865F2] hover:text-white hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5865F2]"
                             aria-label="Discord"
                         >
                             <Icon
@@ -64,7 +64,7 @@ export default function Footer() {
                             href="https://opencollective.com/pompyboard"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-[#7FADF2] hover:text-white hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7FADF2]"
+                            className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-[#7FADF2] hover:text-white hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7FADF2]"
                             aria-label="Open Collective"
                         >
                             <Icon
@@ -77,7 +77,7 @@ export default function Footer() {
                             href="https://github.com/pompyboard/pompyboard"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-slate-900 hover:text-white hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                            className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-slate-900 hover:text-white hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                             aria-label="GitHub"
                         >
                             <Icon icon="fa-brands:github" className="h-6 w-6" />
@@ -85,7 +85,7 @@ export default function Footer() {
                         <Link
                             title="Send us an email"
                             href="mailto:pompydev@proton.me"
-                            className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-[#6D4AFF] hover:text-white hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6D4AFF]"
+                            className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-[#6D4AFF] hover:text-white hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6D4AFF]"
                             aria-label="Email"
                         >
                             <Icon

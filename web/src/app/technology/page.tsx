@@ -1,9 +1,9 @@
 "use client"
 
 import { useRouter, useSearchParams } from "next/navigation"
-import { useEffect, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 
-export default function TechnologyPage() {
+function TechnologyPageContent() {
     const router = useRouter()
     const searchParams = useSearchParams()
     const [isExpertMode, setIsExpertMode] = useState(
@@ -2176,5 +2176,13 @@ export default function TechnologyPage() {
                 )}
             </div>
         </div>
+    )
+}
+
+export default function TechnologyPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-white" />}>
+            <TechnologyPageContent />
+        </Suspense>
     )
 }
